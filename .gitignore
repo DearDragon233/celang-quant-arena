@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# 运行时数据库（含个人账户数据，不入库）
+backend/*.db
+backend/*.db-wal
+backend/*.db-shm
+
+# 前端依赖与构建产物
+frontend/node_modules/
+frontend/dist/
+
+# 文档构建依赖
+docs/docgen/node_modules/
+docs/docgen/img/
+
+# 个人提交材料（含学号姓名，不入公开仓库）
+docs/*.docx
+docs/提交邮件模板.txt
