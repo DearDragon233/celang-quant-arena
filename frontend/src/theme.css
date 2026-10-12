@@ -1,0 +1,121 @@
+/* 智策量化 · 暗色交易终端主题 */
+:root {
+  --bg-page: #08080d;
+  --bg-panel: #101018;
+  --bg-panel-2: #16161f;
+  --bg-hover: #1c1c28;
+  --border: #23232e;
+  --text-1: #e8eef8;
+  --text-2: #93a1ba;
+  --text-3: #5d6b85;
+  --up: #ff5b5b;
+  --down: #35c48d;
+  --flat: #8a94a8;
+  --gold: #8b7cff;
+  --gold-2: #a78bfa;
+  --blue: #8b7cff;
+}
+
+html.dark {
+  --el-bg-color: #101018;
+  --el-bg-color-overlay: #16161f;
+  --el-border-color: #23232e;
+  --el-border-color-light: #23232e;
+  --el-border-color-lighter: #1c1c28;
+  --el-fill-color-light: #1a1a26;
+  --el-fill-color: #16161f;
+  --el-fill-color-blank: #101018;
+  --el-text-color-primary: #e8eef8;
+  --el-text-color-regular: #b9c4d8;
+  --el-text-color-secondary: #8b98ad;
+  color-scheme: dark;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body, #app {
+  height: 100%;
+  background: var(--bg-page);
+  color: var(--text-1);
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+/* 页面背景星云渐变 */
+.app-bg {
+  background:
+    radial-gradient(1000px 500px at 85% -5%, rgba(79, 139, 255, 0.08), transparent),
+    radial-gradient(800px 400px at -10% 110%, rgba(124, 108, 255, 0.06), transparent),
+    var(--bg-page);
+}
+
+.num { font-variant-numeric: tabular-nums; }
+.up { color: var(--up) !important; }
+.down { color: var(--down) !important; }
+.flat { color: var(--flat); }
+
+/* 卡片 */
+html.dark .el-card {
+  background: linear-gradient(180deg, #131320 0%, #0f0f18 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+html.dark .el-card__header {
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+/* 表格 */
+html.dark .el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: #16161f;
+  --el-table-row-hover-bg-color: #1c1c2a;
+  --el-table-border-color: #20202c;
+  font-size: 13.5px;
+}
+
+/* 标签 */
+html.dark .el-tag--dark.el-tag--danger { --el-tag-bg-color: rgba(255,91,91,.18); --el-tag-border-color: rgba(255,91,91,.4); --el-tag-text-color: #ff8a8a; }
+html.dark .el-tag--dark.el-tag--success { --el-tag-bg-color: rgba(53,196,141,.15); --el-tag-border-color: rgba(53,196,141,.4); --el-tag-text-color: #6fe0b8; }
+
+/* 按钮 */
+html.dark .el-button--primary {
+  --el-button-bg-color: linear-gradient(135deg, #6d5ef7, #8b7cff);
+  background: linear-gradient(135deg, #6d5ef7, #8b7cff);
+  border: none;
+  font-weight: 600;
+}
+html.dark .el-button--danger {
+  background: linear-gradient(135deg, #c2373c, #e05555);
+  border: none;
+  font-weight: 700;
+}
+html.dark .el-button--success {
+  background: linear-gradient(135deg, #159a6c, #35c48d);
+  border: none;
+  font-weight: 700;
+}
+
+.page-card { min-height: 100%; }
+.table-toolbar {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px; flex-wrap: wrap; gap: 12px;
+}
+.table-toolbar .filters { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.pager { margin-top: 16px; display: flex; justify-content: flex-end; }
+
+/* 通用面板标题 */
+.panel-title {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.panel-title::before {
+  content: '';
+  width: 4px;
+  height: 14px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #8b7cff, #22d3ee);
+}
